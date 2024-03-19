@@ -1,6 +1,6 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-
+import { galleryRef } from "./pixabay-api";
 export function createMarkup(data) {
     galleryRef.innerHTML = '';
     console.log(data);
@@ -11,7 +11,6 @@ export function createMarkup(data) {
                 message: "Sorry, there are no images matching your search query. Please try again!",
             });
         }
-      
       const markap = images.map(
     (image)=> `<li class="gallery-item">
   <a class="gallery-link" href="${image.largeImageURL}">
@@ -37,7 +36,6 @@ export function createMarkup(data) {
 </li>
 `).join("");
     galleryRef.insertAdjacentHTML("beforeend", markap);
-    
     const galleryCfg = {
     captionsData: 'alt',
   };
