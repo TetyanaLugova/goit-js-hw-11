@@ -1,7 +1,6 @@
 export const formRef = document.querySelector(".form");
 export const inputRef = document.querySelector("#text-search");
 export const galleryRef = document.querySelector(".gallery");
-export let queryInput;
 
 export function fetchImg(queryInput) {
      queryInput = encodeURIComponent(queryInput);

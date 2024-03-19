@@ -1,15 +1,11 @@
 //  
+import {formRef, inputRef, galleryRef, fetchImg} from "./js/pixabay-api";
+import { createMarkup } from "./js/render-functions";
+
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import { formRef } from "./js/pixabay-api";
-import { inputRef } from "./js/pixabay-api";
-import { queryInput } from "./js/pixabay-api";
-import { fetchImg } from "./js/pixabay-api";
-import { createMarkup } from "./js/render-functions";
-import { galleryRef } from './js/pixabay-api';
+let queryInput = "";
 
 inputRef.addEventListener("input", (event) => {
     queryInput = inputRef.value.trim();
