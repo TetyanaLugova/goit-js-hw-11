@@ -3,7 +3,6 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryRef } from "./pixabay-api";
 export function createMarkup(data) {
     galleryRef.innerHTML = '';
-    console.log(data);
     const images = data.hits;
         if (images.length === 0) {
             iziToast.error({

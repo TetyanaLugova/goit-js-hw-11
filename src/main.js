@@ -3,13 +3,13 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { formRef, inputRef, galleryRef, fetchImg } from "./js/pixabay-api";
 import { createMarkup } from "./js/render-functions";
-let queryInput = ''; // створюємо локальну змінну для зберігання значення запиту
-inputRef.addEventListener("input", (event) => {
-    queryInput = inputRef.value.trim(); // оновлюємо значення локальної змінної при введенні
-    galleryRef.innerHTML = '';
-});
+let queryInput = ''; 
+
+
 formRef.addEventListener("submit", (event)=>{
     event.preventDefault();
+    queryInput = inputRef.value.trim(); // оновлюємо значення локальної змінної при введенні
+    galleryRef.innerHTML = '';
     if (queryInput) {
         galleryRef.innerHTML = '<div class="loader"></div>';
         fetchImg(queryInput)
